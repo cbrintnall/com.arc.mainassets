@@ -1,5 +1,4 @@
 using Cinemachine;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using System.Linq;
 using Arc.Lib.Debug;
@@ -27,11 +26,11 @@ namespace Arc.Lib.Controllers
 		public bool IsWallRunning { get => _moveState == MovementState.WallRunning; }
 		public MovementState CurrentState { get => _moveState; }
 
-		[Title("Audio")]
+		[Header("Audio")]
 		[SerializeField] AudioSource _audioPlayer;
 		[SerializeField] AudioClip _jumpSound;
 
-		[Title("Combat")]
+		[Header("Combat")]
 		[ReadOnly] [ShowInInspector] float _attackChargeTime;
 		[ReadOnly] [ShowInInspector] float _releaseStartedAt;
 		[SerializeField] float _maxAttackChargeTimeSeconds = 1f;
@@ -82,11 +81,11 @@ namespace Arc.Lib.Controllers
 		public float LeftFreeLookClamp = -90.0f;
 		public float RightFreeLookClamp = 90.0f;
 
-		[Title("Speed")]
+		[Header("Speed")]
 		[ReadOnly][ShowInInspector] float _currentTargetSpeed;
 		[SerializeField] float _topTargetSpeed = 40f;
 
-		[Title("Climbing")]
+		[Header("Climbing")]
 		[SerializeField] float _climbSpaceBuffer = .01f;
 		[SerializeField] float _climbSpeed;
 		[SerializeField] float _climbCastDistance;
@@ -95,11 +94,11 @@ namespace Arc.Lib.Controllers
 		[SerializeField] Transform _ledgeClimb;
 		[SerializeField] LayerMask _climbableLayers;
 
-		[Title("Crouching")]
+		[Header("Crouching")]
 		[SerializeField] float _crouchCapsuleHeight;
 		[Range(0, 1f)][SerializeField] float _crouchSpeedMultiplier = .3f;
 
-		[Title("Sliding")]
+		[Header("Sliding")]
 		[ReadOnly] [ShowInInspector] float _slideTargetSpeed;
 		[SerializeField] Transform _slidePoint;
 		[SerializeField] float _slideCheckDistance = .5f;
@@ -108,7 +107,7 @@ namespace Arc.Lib.Controllers
 		[SerializeField] float _slideSlopeMultiplier = 1f;
 		[SerializeField] float _slideFlatSlowdownRate = .5f;
 
-		[Title("Wall running")]
+		[Header("Wall running")]
 		[ReadOnly] [ShowInInspector] float _currentWallRunTargetSpeed;
 		[SerializeField] float _wallRayDistance = .5f;
 		[SerializeField] float _wallRunSpeed = 1f;
@@ -120,7 +119,7 @@ namespace Arc.Lib.Controllers
 		[SerializeField] float _fallWallRunBaseDegrees = 60f;
 		[SerializeField] MovementState[] _wallRunSpeedResetStates = new MovementState[] { };
 
-		[Title("Jumping")]
+		[Header("Jumping")]
 		[ReadOnly] [ShowInInspector] int _jumpsSinceLand = 0;
 		[SerializeField] MovementState[] _verticalVelocityResetStates = new MovementState[] { };
 		[SerializeField] int _maxJumps = 2;
@@ -130,7 +129,7 @@ namespace Arc.Lib.Controllers
 		[ReadOnly] [ShowInInspector] MovementState _moveState;
 		[ReadOnly] [ShowInInspector] MovementState _lastMoveState;
 
-		[Title("Hookshot")]
+		[Header("Hookshot")]
 		[ReadOnly] [ShowInInspector] Vector3 _landingPoint;
 		[SerializeField] float _hookShotTargetSpeed = 10f;
 		[SerializeField] float _distanceToSatisfyHookShot = .25f;
