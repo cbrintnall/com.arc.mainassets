@@ -31,8 +31,8 @@ namespace Arc.Lib.Controllers
 		[SerializeField] AudioClip _jumpSound;
 
 		[Header("Combat")]
-		[ReadOnly] [ShowInInspector] float _attackChargeTime;
-		[ReadOnly] [ShowInInspector] float _releaseStartedAt;
+		 float _attackChargeTime;
+		 float _releaseStartedAt;
 		[SerializeField] float _maxAttackChargeTimeSeconds = 1f;
 		[SerializeField] float _releaseTimeSeconds = .5f;
 
@@ -82,7 +82,7 @@ namespace Arc.Lib.Controllers
 		public float RightFreeLookClamp = 90.0f;
 
 		[Header("Speed")]
-		[ReadOnly][ShowInInspector] float _currentTargetSpeed;
+		 float _currentTargetSpeed;
 		[SerializeField] float _topTargetSpeed = 40f;
 
 		[Header("Climbing")]
@@ -99,7 +99,7 @@ namespace Arc.Lib.Controllers
 		[Range(0, 1f)][SerializeField] float _crouchSpeedMultiplier = .3f;
 
 		[Header("Sliding")]
-		[ReadOnly] [ShowInInspector] float _slideTargetSpeed;
+		 float _slideTargetSpeed;
 		[SerializeField] Transform _slidePoint;
 		[SerializeField] float _slideCheckDistance = .5f;
 		[SerializeField] float _slideSpeedChangeRate = 2.5f;
@@ -108,7 +108,7 @@ namespace Arc.Lib.Controllers
 		[SerializeField] float _slideFlatSlowdownRate = .5f;
 
 		[Header("Wall running")]
-		[ReadOnly] [ShowInInspector] float _currentWallRunTargetSpeed;
+		 float _currentWallRunTargetSpeed;
 		[SerializeField] float _wallRayDistance = .5f;
 		[SerializeField] float _wallRunSpeed = 1f;
 		[SerializeField] float _wallRunSpeedBurst = 3f;
@@ -120,17 +120,17 @@ namespace Arc.Lib.Controllers
 		[SerializeField] MovementState[] _wallRunSpeedResetStates = new MovementState[] { };
 
 		[Header("Jumping")]
-		[ReadOnly] [ShowInInspector] int _jumpsSinceLand = 0;
+		 int _jumpsSinceLand = 0;
 		[SerializeField] MovementState[] _verticalVelocityResetStates = new MovementState[] { };
 		[SerializeField] int _maxJumps = 2;
 		[SerializeField] float _coyoteTime = .5f;
 		[SerializeField] float _jumpSpeedBumpMultiplier = .25f;
 
-		[ReadOnly] [ShowInInspector] MovementState _moveState;
-		[ReadOnly] [ShowInInspector] MovementState _lastMoveState;
+		 MovementState _moveState;
+		 MovementState _lastMoveState;
 
 		[Header("Hookshot")]
-		[ReadOnly] [ShowInInspector] Vector3 _landingPoint;
+		 Vector3 _landingPoint;
 		[SerializeField] float _hookShotTargetSpeed = 10f;
 		[SerializeField] float _distanceToSatisfyHookShot = .25f;
 
