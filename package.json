@@ -1,0 +1,14 @@
+﻿{
+  "name": "com.arc.mainassets",
+  "displayName": "Arc Main Assets",
+  "version": "0.0.1",
+  "unity": "2020.3",
+  "dependencies": {
+    "com.unity.cinemachine": "2.6.11",
+    "com.unity.inputsystem": "1.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:StansAssets/com.stansassets.foundation.git"
+  }
+}
